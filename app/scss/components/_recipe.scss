@@ -100,9 +100,12 @@
     gap: rem(8);
     list-style-type: none;
     padding: 0;
+
+
   }
 
   &__instructions-step {
+    display: flex;
     counter-increment: step-counter;
 
     &::before {
@@ -112,6 +115,7 @@
       line-height: 1.5;
       color: var(--color-number);
       padding-inline-end: rem(16);
+
     }
   }
 
