@@ -1,0 +1,181 @@
+@use "../utils/functions" as *;
+@use "../layout/screen-size" as *;
+
+.recipe {
+  background-color: var(--color-recipe-bg);
+
+  @include breakpoint(tablet) {
+    margin-block : rem(128);
+    border-radius: rem(24);
+    width:clamp(38.5rem, 29.9413rem + 17.8306vw, 46rem);
+    padding: rem(40);
+    margin-inline: auto;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(tablet) {
+      width: clamp(33.5rem, 24.9413rem + 17.8306vw, 41rem);
+      border-radius: 12px;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    padding: rem(40) rem(32);
+
+    @include breakpoint(tablet) {
+      padding: rem(40) 0 0 0;
+    }
+  }
+
+  //region preparation
+  &__preparation {
+    display: grid;
+    gap: rem(16);
+    background-color: var(--color-preparation-bg);
+    padding: rem(24);
+  }
+
+  &__time-list {
+    display: grid;
+    gap: rem(8);
+  }
+
+  &__time-item {
+    margin-inline-start: 8px;
+    display: flex;
+    align-items: center;
+    justify-items: start;
+
+    &::before {
+      content: '';
+      width: rem(4);
+      height: rem(4);
+      border-radius: 50%;
+      background: var(--color-bulet);
+    }
+  }
+
+  &__time-item-text {
+    padding-inline-start: 28px;
+    display: block;
+  }
+
+  //endregion
+
+  //region ingredients
+
+  &__ingredients-list {
+    display: grid;
+    gap: rem(8);
+  }
+
+  &__ingredients-ingredient {
+    margin-inline-start: 8px;
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    justify-items: start;
+
+    &::before {
+      content: '';
+      width: rem(4);
+      height: rem(4);
+      border-radius: 50%;
+      background: var(--color-bulet);
+    }
+  }
+
+  //endregion
+
+  //region instructions
+
+  &__instructions-steps {
+    display: grid;
+    gap: rem(8);
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__instructions-step {
+    counter-increment: step-counter;
+
+    &::before {
+      content: counter(step-counter) ".";
+      font-size: var(--font-size-number);
+      font-weight: var(--font-weight-number);
+      line-height: 1.5;
+      color: var(--color-number);
+      padding-inline-end: rem(16);
+    }
+  }
+
+  //endregion
+
+  //region nutrition
+
+  &__nutrition-indication {
+    padding-block-end: 24px;
+  }
+
+  &__grid-row {
+    display: grid;
+    grid-template-columns: rem(32) 1fr rem(16) 1fr rem(32);
+
+    &:not(:last-child) {
+      border-block-end: 1px solid var(--color-table-border);
+    }
+
+    &:not(:first-child):not(:last-child) {
+      padding-block: rem(12);
+    }
+
+    &:first-child {
+      padding-block-end: rem(12);
+    }
+
+    &:last-child {
+      padding-block-start: rem(12);
+    }
+  }
+
+  &__grid-start {
+    grid-column: 1 / 2;
+  }
+
+  &__grid-th {
+    grid-column: 2 / 3;
+    font-weight: var(--font-weight-th);
+    font-size: var(--font-size-th);
+    line-height: 1.5;
+    color: var(--color-th);
+  }
+
+  &__grid-separator {
+    grid-column: 3 / 4;
+  }
+
+  &__grid-td {
+    grid-column: 4 / 5;
+    font-weight: var(--font-weight-td);
+    font-size: var(--font-size-td);
+    line-height: 1.5;
+    color: var(--color-td);
+  }
+
+  &__grid-end {
+    grid-column: 5 / 6;
+  }
+
+  //endregion
+
+}
+
+
+
+

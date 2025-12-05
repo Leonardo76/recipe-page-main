@@ -1,0 +1,33 @@
+@use "../layout/screen-size" as *;
+
+:root {
+  --c-rose-800:hsl(332, 51%, 32%);
+  --c-rose-50:hsl(330, 100%, 98%);
+
+  --c-stone-900:hsl(24, 5%, 18%);
+  --c-stone-600:hsl(30, 10%, 34%);
+  --c-stone-150:hsl(30, 18%, 87%);
+  --c-stone-100:hsl(30, 54%, 90%);
+
+  --c-brown-800:hsl(14, 45%, 36%);
+
+  --c-white:hsl(0, 0%, 100%);
+
+  --color-main-text:var(--c-stone-600);
+  --color-main-bg:var(--c-white);
+  --color-h1-text:var(--c-stone-900);
+  --color-h2-text:var(--c-brown-800);
+  --color-h3-text:var(--c-brown-800);
+  --color-separator:var(--c-stone-150);
+  --color-recipe-bg:var(--c-white);
+  --color-preparation-bg:var(--c-rose-50);
+  --color-bulet:var(--c-rose-800);
+  --color-number:var(--c-brown-800);
+  --color-th:var(--c-stone-600);
+  --color-td:var(--c-brown-800);
+  --color-table-border:var(--c-stone-150);
+
+  @include breakpoint(tablet) {
+    --color-main-bg: var(--c-stone-100);
+  }
+}

@@ -1,0 +1,75 @@
+@use "../layout/screen-size" as *;
+
+/* young-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Young Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/young-serif-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/outfit-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/outfit-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/outfit-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --font-preset-1-2: "Young Serif";
+  --font-preset-3-4: "Outfit";
+
+  --fs-40: 40px;
+  --fs-36: 36px;
+  --fs-28: 28px;
+  --fs-20: 20px;
+  --fs-16: 16px;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --font-body:var(--font-preset-3-4);
+  --font-h1h2:var(--font-preset-1-2);
+  --font-h3:var(--font-preset-3-4);
+
+  --font-size-body:var(--fs-16);
+  --font-size-h1:var(--fs-36);
+  --font-size-h2:var(--fs-28);
+  --font-size-h3:var(--fs-20);
+  --font-size-number:var(--fs-16);
+  --font-size-th:var(--fs-16);
+  --font-size-td:var(--fs-16);
+
+  --font-weight-h1h2:var(--fw-regular);
+  --font-weight-h3:var(--fw-semi-bold);
+  --font-weight-p:var(--fw-regular);
+  --font-weight-number:var(--fw-bold);
+  --font-weight-th:var(--fw-regular);
+  --font-weight-td:var(--fw-bold);
+
+  @include breakpoint(tablet) {
+    --font-size-h1:var(--fs-40);
+  }
+}

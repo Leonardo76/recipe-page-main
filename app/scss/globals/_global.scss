@@ -1,0 +1,63 @@
+@use '../utils/functions' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--color-main-text);
+  background-color: var(--color-main-bg);
+  font-size: var(--font-size-body);
+}
+
+h1, h2 {
+  font-family: var(--font-h1h2), Arial, Helvetica, sans-serif;
+  line-height: 1;
+  font-weight: var(--font-weight-h1h2);
+  margin-block-end: rem(24);
+}
+
+h1 {
+  color: var(--color-h1-text);
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  color: var(--color-h2-text);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-family: var(--font-h3), Arial, Helvetica, sans-serif;
+  color: var(--color-h3-text);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: 1;
+}
+
+p {
+  line-height: 1.5;
+  font-weight: var(--font-weight-p);
+}
+
+ul, li {
+  padding: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  padding: 0;
+
+  margin-top: rem(32);
+  border-block-end: 1px solid var(--color-separator);
+}
+
+
